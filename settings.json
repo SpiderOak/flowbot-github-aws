@@ -1,0 +1,9 @@
+{
+  "username": "github-bot-aws",
+  "password": "MyBotsSuperSecretPassword",
+  "org_id": "MYTEAMSSUPERSECRETTEAMID",
+  "display_name": "GitHub",
+  "biography": "I'm just a poor bot; nobody loves me...",
+  "github_webhook_secret": "my_secret_key",
+  "github_webhook_url": "/hooks"
+}
