@@ -1,5 +1,5 @@
 # flowbot-github-aws
-A demonstration of a [flowbot-github](https://github.com/SpiderOak/flowbot-github) bot running on an Elastic Beanstalk docker deployment. This bot responds to GitHub webhook events and sends messages to [Seamphor](https://spideroak.com/solutions/semaphor). 
+A demonstration of a [flowbot-github](https://github.com/SpiderOak/flowbot-github) bot running on an Elastic Beanstalk docker deployment. This bot responds to GitHub webhook events and sends messages to [Semaphor](https://spideroak.com/solutions/semaphor). 
 
 
 
@@ -18,11 +18,10 @@ A demonstration of a [flowbot-github](https://github.com/SpiderOak/flowbot-githu
 	- `github_webhook_secret` **required**: This is a secret string that github will use to validate itself to your bot.
 	- `display_name` *recommended*: This is the name your bot will have in the channel, (e.g. `@github`). If no display name is given, the bot will use it's username.
 	- `github_webhook_url` *recommended*: This is the relative url that webhooks should be directed. Defaults to `/hooks`.
-
 	- `biography`: A short description of your bot.
 	- `photo`: An avatar image to use for the bot (e.g. "avatar.jpg"; must be in this directory at the time you run the `make` step below).
 
-  > Note: The Makefile expects a photo file with the name `avatar.jpg`; if you include a photo file with a different name, make sure you either update the Makefile to refernce the new [filename](https://github.com/SpiderOak/flowbot-github-aws/blob/master/Makefile#L1) or run the make command with an explicit reference to your image name: `make IMAGE=myimage.png`
+  	> Note: The Makefile expects a photo file with the name `avatar.jpg`; if you include a photo file with a different name, make sure you either update the Makefile to refernce the new [filename](https://github.com/SpiderOak/flowbot-github-aws/blob/master/Makefile#L1) or run the make command with an explicit reference to your image name: `make IMAGE=myimage.png`
 	
 
 
