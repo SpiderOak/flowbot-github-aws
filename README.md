@@ -21,7 +21,7 @@ A demonstration of a [flowbot-github](https://github.com/SpiderOak/flowbot-githu
 	- `biography`: A short description of your bot.
 	- `photo`: An avatar image to use for the bot (e.g. "avatar.jpg"; must be in this directory at the time you run the `make` step below).
 
-  	> Note: The Makefile expects a photo file with the name `avatar.jpg`; if you include a photo file with a different name, make sure you either update the Makefile to refernce the new [filename](https://github.com/SpiderOak/flowbot-github-aws/blob/master/Makefile#L1) or run the make command with an explicit reference to your image name: `make IMAGE=myimage.png`
+  		> Note: The Makefile expects a photo file with the name `avatar.jpg`; if you include a photo file with a different name, make sure you either update the Makefile to refernce the new [filename](https://github.com/SpiderOak/flowbot-github-aws/blob/master/Makefile#L1) or run the make command with an explicit reference to your image name: `make IMAGE=myimage.png`
 	
 
 
