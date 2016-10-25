@@ -26,6 +26,8 @@ source_zip: install_bot
 	cp Dockerrun.aws.json tmp/Dockerrun.aws.json
 	cp settings.json tmp/settings.json
 
+	cp avatar.png tmp/avatar.png
+
 	# zip everything up!
 	cd tmp; zip -r source.zip *
 	mv tmp/source.zip source.zip
