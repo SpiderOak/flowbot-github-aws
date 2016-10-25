@@ -4,8 +4,8 @@ FROM python:2.7
 RUN apt-get update
 RUN apt-get install curl
 RUN apt-get -y install libxss1
-RUN curl -o semaphor.deb https://spideroak.com/releases/semaphor/debian
-RUN dpkg -i semaphor.deb
+RUN curl -O -J https://spideroak.com/releases/semaphor/debian
+RUN dpkg -i semaphor*.deb
 RUN apt-get install -f
 
 ADD requirements.txt /src/requirements.txt
