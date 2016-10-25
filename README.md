@@ -20,11 +20,13 @@ A demonstration of a [flowbot-github](https://github.com/SpiderOak/flowbot-githu
 	- `github_webhook_url` *recommended*: This is the relative url that webhooks should be directed. Defaults to `/hooks`.
 
 	- `biography`: A short description of your bot.
-	- `photo`: An avatar image to use for the bot (e.g. "avatar.png"; must be in this directory at the time you run the `make` step below).
+	- `photo`: An avatar image to use for the bot (e.g. "avatar.jpg"; must be in this directory at the time you run the `make` step below).
+
+  > Note: The Makefile expects a photo file with the name `avatar.jpg`; if you include a photo file with a different name, make sure you either update the Makefile to refernce the new [filename](https://github.com/SpiderOak/flowbot-github-aws/blob/master/Makefile#L1) or run the make command with an explicit reference to your image name: `make IMAGE=myimage.png`
 	
 
 
-3. Run `make` in a terminal from this dir. This will produce a `source.zip` file which you will need when uploaded to AWS.
+3. Run the command `make` in a terminal from this dir. This will produce a `source.zip` file which you will need when uploaded to AWS.
 4. Create a new [Elastic Beanstalk Single Container Instance](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/docker-singlecontainer-deploy.html). When prompted to upload a source bundle, select the `source.zip` file from above.
 5. Once your Elastic Beanstalk app is running, make note of the url.
 6. As soon as the app is running, a join request will automatically be triggered in the Semaphor org for which it was configured (see `org_id` in settings above). The admin of the Semaphor team should approve this request and then add the github bot to any channels desired.

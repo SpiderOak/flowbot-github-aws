@@ -1,3 +1,5 @@
+IMAGE = avatar.jpg
+
 all: preclean source_zip cleanup
 
 install_bot:
@@ -26,7 +28,8 @@ source_zip: install_bot
 	cp Dockerrun.aws.json tmp/Dockerrun.aws.json
 	cp settings.json tmp/settings.json
 
-	cp avatar.png tmp/avatar.png
+	# Copy over the avatar image.
+	cp ${IMAGE} tmp/${IMAGE}
 
 	# zip everything up!
 	cd tmp; zip -r source.zip *
