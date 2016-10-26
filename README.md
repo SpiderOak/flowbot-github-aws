@@ -1,3 +1,6 @@
+> Please Note: This project has not undergone a security review.
+
+
 # flowbot-github-aws
 A demonstration of a [flowbot-github](https://github.com/SpiderOak/flowbot-github) bot running on an Elastic Beanstalk docker deployment. This bot responds to GitHub webhook events and sends messages to [Semaphor](https://spideroak.com/solutions/semaphor). 
 
