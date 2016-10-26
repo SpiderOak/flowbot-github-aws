@@ -3,17 +3,17 @@ IMAGE = avatar.jpg
 all: preclean source_zip cleanup
 
 install_bot:
-	rm -rf flowbot-barebones
+	rm -rf flowbot
 	rm -rf flowbot-github
 	git clone git@github.com:SpiderOak/flowbot-github.git
 	# We don't need the tests dir
 	rm -rf flowbot-github/src/tests
 
-	# Remove this when flowbot_barebones becomes public, this just installs the
+	# Remove this when flowbot becomes public, this just installs the
 	# boilerplate bot alongside the github bot so that it can be imported as if
 	# it were installed.
-	git clone git@github.com:SpiderOak/flowbot-barebones.git
-	mv flowbot-barebones/src flowbot-github/src/flowbot
+	git clone git@github.com:SpiderOak/flowbot.git
+	mv flowbot/src flowbot-github/src/flowbot
 
 source_zip: install_bot
 	# Create a temportary folder, we will eventually zip it's contents.
@@ -37,9 +37,9 @@ source_zip: install_bot
 
 preclean:
 	rm -f source.zip
-	rm -rf flowbot-barebones
+	rm -rf flowbot
 
 cleanup:
 	rm -rf tmp
 	rm -rf flowbot-github
-	rm -rf flowbot-barebones
+	rm -rf flowbot
