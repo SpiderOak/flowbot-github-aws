@@ -1,4 +1,9 @@
 > Please Note: This project has not undergone a security review.
+> 
+> Deploying Semaphor bots to hosted services like AWS compromises the promise of "Zero Knowledge"
+> since the bot has access to all messages in channels to which it belongs (and therefore so does the host service).
+> However, Semaphor channels are each cryptographically secure, so consider only adding these bots to channels that
+> don't contain sensitive messages.
 
 
 # flowbot-github-aws

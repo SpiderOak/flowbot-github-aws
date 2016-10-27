@@ -8,12 +8,12 @@ RUN curl -O -J https://spideroak.com/releases/semaphor/debian
 RUN dpkg -i semaphor*.deb
 RUN apt-get install -f
 
-ADD requirements.txt /src/requirements.txt
-RUN cd /src; pip install -r requirements.txt
+RUN git clone https://github.com/SpiderOak/flowbot-github.git
+RUN cd flowbot-github; pip install -r requirements.txt
 
-# Copy code
-COPY . /src
-WORKDIR /src
+# Copy local files over (setting.json, image file)
+COPY . flowbot-github/src
+WORKDIR /flowbot-github/src
 
 EXPOSE 8080
 
