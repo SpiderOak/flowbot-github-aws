@@ -9,12 +9,12 @@ RUN dpkg -i semaphor*.deb
 RUN apt-get install -f
 
 # Install flowbot-github locally
-RUN git clone https://github.com/SpiderOak/flowbot-github.git
+RUN git clone https://github.com/SpiderOak/flowbot-github.git flowbot-github
 RUN cd flowbot-github; pip install -r requirements.txt
 
 # Copy local files over (setting.json, image file)
 COPY . flowbot-github/src
-WORKDIR /flowbot-github/src
+WORKDIR flowbot-github/src
 
 EXPOSE 8080
 
